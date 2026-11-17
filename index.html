@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Watch a simulated pendulum and compare its period with the small-angle estimate.">
+  <title>Pendulum Period Playground</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<main>
+  <div class="heading">
+    <div><h1>Pendulum Period Playground</h1><p>Watch a simulated pendulum and compare its period with the small-angle estimate.</p></div>
+    <a href="https://github.com/netcodermike/pendulum-period-playground">Project source ↗</a>
+  </div>
+  <div class="workspace">
+    <section class="panel stage" aria-label="Project workspace">
+      <canvas width="760" height="416" aria-label="Simulated pendulum and release arc"></canvas><p id="compare" class="extra"></p>
+      <p id="reading" role="status"></p>
+    </section>
+    <section class="panel controls" aria-label="Controls">
+      <form id="settings"><label for="length">Length<output id="length-value" for="length"></output><input id="length" type="range" min="0.25" max="3" step="0.05" value="1.5"></label><label for="angle">Release angle<output id="angle-value" for="angle"></output><input id="angle" type="range" min="5" max="150" step="1" value="70"></label><div class="actions"><button type="button" id="play" aria-pressed="false">Play</button><button type="button" id="reset-settings">Reset</button></div>
+        <p>Release the pendulum at different angles and compare the two period estimates. The bob starts from rest.</p></form>
+    </section>
+  </div>
+</main>
+</body>
+</html>
